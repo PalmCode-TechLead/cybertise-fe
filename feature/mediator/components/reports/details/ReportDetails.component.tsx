@@ -486,7 +486,7 @@ const ReportDetails = ({ id }: { id: string }) => {
         {!isHiddenChatBox && (
           <div
             className={cn(
-              "sticky bottom-0 z-20 bg-background-page-light py-2 dark:bg-background-page-dark"
+              "sticky bottom-0 z-50 bg-background-page-light py-2 dark:bg-background-page-dark"
             )}
           >
             <Tiptap
@@ -500,6 +500,7 @@ const ReportDetails = ({ id }: { id: string }) => {
               isChat
               onClickSendAttachment={() => setOpenAttachment(true)}
               onClickSendMessage={sendMessage}
+              withImage
             />
           </div>
         )}

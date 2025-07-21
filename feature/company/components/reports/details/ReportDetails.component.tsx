@@ -335,6 +335,7 @@ const ReportDetails = ({ id }: { id: string }) => {
               isChat
               onClickSendAttachment={() => setOpenAttachment(true)}
               onClickSendMessage={sendMessage}
+              withImage
             />
           </div>
         )}

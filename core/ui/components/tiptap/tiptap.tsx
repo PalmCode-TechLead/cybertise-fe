@@ -45,6 +45,7 @@ interface I_TiptapProps extends React.HTMLAttributes<HTMLDivElement> {
   placeholder?: string;
   showing?: boolean;
   isError?: boolean;
+  withImage?: boolean;
 }
 
 const Tiptap = ({
@@ -62,6 +63,7 @@ const Tiptap = ({
   placeholder = "",
   showing = false,
   isError = false,
+  withImage = false,
   ...props
 }: I_TiptapProps) => {
   const t = useTranslations("TextEditor");
@@ -187,6 +189,7 @@ const Tiptap = ({
           <Toolbar
             variant={variant}
             editor={editor}
+            withImage={withImage}
           />
           {!!onClickSendAttachment && !!onClickSendMessage && (
             <div className="_flexbox__row__center gap-4">
